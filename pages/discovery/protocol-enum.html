@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../../styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.4.js"/>
+        <title>Protocol Enumeration</title>
+    </head>
+    <body style=>
+        <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+        <div class="border-div">
+            <h1>General Protocol Enumeration</h1>
+            <pre id="enum4linux"></pre>
+            <div class="section-wrapper">
+                <h2>Enum4Linux</h2>
+                <p>Enum4Linux is a tool that can be used to enumerate the protocols that are used to communicate with a target. It is a "passive" tool that can be used with any target.</p>
+                <p>Usage:</p>
+                <span class="code">enum4linux -S -u 192.168.0.1</span>
+                <p class="ind">-S: specifies "shares" (SMB)</p>
+                <p class="ind">-u: is url (IP)</p>
+                <p>Cheat sheet: <a href="https://highon.coffee/blog/enum4linux-cheat-sheet/" target="_blank">https://highon.coffee/blog/enum4linux-cheat-sheet/</a></p>
+            </div>
+            <pre id="nmap"></pre>
+            <div class="section-wrapper">
+                <h2>Nmap</h2>
+                <p>NMAP is a network mapping tool designed to show hosts andtheir corresponding network/device information accross subnets. Refer to the man page <span class="code">man nmap</span> for all flags available</p>
+                <p>Usage:</p>
+                <span class="code">nmap -sV -O -vv -T3 -p 0-10000 192.168.0.1</span>
+                <p class="ind">-sV: specifies version detection</p>
+                <p class="ind">-O: specifies OS detection</p>
+                <p class="ind">-vv: specifies verbose output (very verbose)</p>
+                <p class="ind">-T3: specifies the speed of the scan</p>
+                <p class="ind">-p: specifies port list/port range <span style="background: yellow;">(-p- for all ports)</span></p>
+                <p class="ind">The ip can also be given a CIDR, to indicate a subnet, you can also separate IPs and IPs with subnets with commas</p>
+                <span class="code">nmap -p 445 --script=smb-enum-shares.nse,smb-enum-users.nse 192.168.0.1</span>
+                <p class="ind">-p: specifies ports</p>
+                <p class="ind">--script is the built-in or external script for nmap to use, in this case the smb-enum-shares and smb-ennum-users scripts to get SMB information</p>
+                <p>A full list of built-in NMAP scripts can be found <a href="https://nmap.org/nsedoc/scripts/" target="_blank">here</a></p>
+                <p>You can output nmap in several formats.<br>&emsp;-oN for normal output<br>&emsp;-oX for XML output (metasploit!)<br>&emsp;-oG for Grepable output</p>
+                <p>Some other important flags:</p>
+                <ul>
+                    <li>-Pn: specifies "no ping"</li>
+                    <li>-n: specifies "no DNS resolution"</li>
+                    <li>-sS: SYN Stealth (needs root/sudo)</li>
+                    <li>-sU: specifies "UDP"</li>
+                    <li>-sT: TCP Connect</li>
+                    <li>-sn: Ping the target <span style="background: yellow;">(PING SWEEP)</span> Example: <span class="code">nmap -sn 192.168.0.0/24</span> (Will ping sweep the entire network)</li>
+                </ul>
+                <p>By default, a privileged user executes -sS, and a non-privileged user executes -sT</p>
+            </div>
+            <pre id="dnsenum"></pre>
+            <div class="section-wrapper">
+                <h2>Dnsenum</h2>
+                <p><a href="https://github.com/SpiderLabs/dnsenum">Download</a></p>
+                <p>Dnsenum is a tool that can be used to enumerate DNS information on a target</p>
+                <p>Usage:</p>
+                <span class="code">dnsenum 192.168.0.1</span>
+            </div>
+            <pre id="dig"></pre>
+            <div class="section-wrapper">
+                <h2>Dig</h2>
+                <p>Dig is a tool that can be used to enumerate DNS information on a target</p>
+                <p>Usage:</p>
+                <span class="code">dig 192.168.0.1 AAAA</span>   
+                <p class="ind">- AAAA: can be any DNS type to lookup (Ex. A, MX, CNAMe, etc.)</p>
+            </div>
+            <pre id="rpcclient"></pre>
+            <div class="section-wrapper">
+                <h2>RPCClient</h2>
+                <p>RPCClient is a tool used for enumerating network shares and gathering smb information</p>
+                <p>Usage:</p>
+                <span class="code">rpcclient -U "" -N 192.168.0.1</span>
+                <p class="ind">-U: specifies username</p>
+                <p class="ind">-N: specifies "No password"</p>
+                <p>Once RPCClient is running, you can use several commands to gain information about the target</p>
+                <p>Example:</p>
+                <p><span class="code">enumdomusers</span> - Shows the domain users</p>
+                <p><span class="code">enumdomgroups</span> - Shows the domain groups</p>
+                <p><span class="code">queryuser username</span> - Shows the user and their SID</p>
+                <p><span class="code">?</span> - Shows the list of commands</p>
+            </div>
+        </div>
+    </body>
+</html>

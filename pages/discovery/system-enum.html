@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../../styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.3.js"/>
+        <title>System Info Enumeration</title>
+    </head>
+    <body>
+        <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+        <div class="border-div">
+            <h1>System Enumeration</h1>
+            <pre id="meterpreter"></pre>
+            <div class="section-wrapper">
+                <h2>Meterpreter</h2>
+                    <ul class="ul-format">
+                        <li>sysinfo - Get system (OS) information</li>
+                        <li>getuid - Get current user information</li>
+                        <li>ps - List running processes</li>
+                        <li>hashdump - Dump password hashes</li>
+                        <li>getprivs - Dump your current user's privileges</li>
+                        <li>pgrep process - Get information about a running process</li>
+                        <li>show mount - Shows mounted drives with drive information</li>
+                        <li>ifconfig - Get information about network interfaces</li>
+                        <li>netstat - Get network connections</li>
+                        <li>route - Get routing table</li>
+                        <li>arp - Get ARP table</li>
+                    </ul>
+            </div>
+            <pre id="windows"></pre>
+            <div class="section-wrapper">
+                <h2>Windows</h2>
+                <ul class="ul-format">
+                    <li>wmic qfe get Caption,Description,HotFixID,InstalledOn - Will return a list of installed updates w/ HotFix URL</li>
+                    <li>query user - Get logged in users</li>
+                    <li>net user - List all users</li>
+                    <li>net user username - Get information about a user</li>
+                    <li>net localgroup - List local groups</li>
+                    <li>net localgroup groupname - List members of a local group and information about the group</li>
+                    <li>whoami /priv - Get privilege information about the current user</li>
+                    <li>ipconfig /all - Get information about all network interfaces</li>
+                    <li>route print - Get routing table</li>
+                    <li>arp -a - Get ARP table</li>
+                    <li>netstat -ano - Get network connections</li>
+                    <li>netsh firewall show state - Get firewall state</li>
+                    <li>netsh advfirewall firewall show PROPERTY - Get firewall information (advanced)</li>
+                    <li>net start - Show running services</li>
+                    <li>wmic service list brief - List running services with statuses</li>
+                    <li>tasklist /SVC - List running processes with services in correlation to the process</li>
+                    <li>schtasks /query /fo LIST /v- List scheduled tasks (verbose)</li>
+                    <li>where /r c:\ file.txt - List files in C:\ and all subdirectories with matching name of file.txt</li>
+                </ul>
+            </div>
+            <pre id="linux"></pre>
+            <div class="section-wrapper">
+                <h2>Linux</h2>
+                <ul class="ul-format">
+                    <li>uname -a - Get system information</li>
+                    <li>hostname - Get hostname</li>
+                    <li>cat /etc/*release - Get OS information</li>
+                    <li>cat /etc/hosts - Show local host resolution</li>
+                    <li>cat /etc/passwd - List all users</li>
+                    <li>env - Show environment variables</li>
+                    <li>lscpu - Get CPU information</li>
+                    <li>df -h - Get disk usage</li>
+                    <li>id - Get user information</li>
+                    <li>whoami - Get user information</li>
+                    <li>cat /etc/passwd - List all users</li>
+                    <li>cat /etc/group - List all groups</li>
+                    <li>last - Get last logged in users</li>
+                    <li>lastlog - Show all users and their latest log-in history</li>
+                    <li>who - Get currently logged in users</li>
+                    <li>netstat -ano - Get network connections</li>
+                    <li>route - Get routing table</li>
+                    <li>arp -a - Get ARP table</li>
+                    <li>ip as/ifconfig/cat etc/networks - Get IP information</li>
+                    <li>groups - List groups</li>
+                    <li>groups username - Get user groups</li>
+                    <li>cat /etc/resolv.conf - Get DNS information (Will show default gateway)</li>
+                    <li>ps aux - List running processes (Verbose)</li>
+                    <li>top - List running processes (Current, will update in real-time)</li>
+                    <li>crontab -l - List active scheduled tasks</li>
+                    <li>ls -la /etc/cron* - List all scheduled tasks</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
