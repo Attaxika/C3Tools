@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Search</title>
+        <link rel="stylesheet" href="../../styles/styles.css">
+        <link rel="script" href="./scripts/cachebuster1.3.js">
+        <script src="search.js"></script>
+    </head>
+    <body style="height: 100vh;">
+        <button class="home-button"><a href="../../index.html">Home</a></button>
+        <div class="border-div">
+            <h1 style="text-align: center;">Search</h1>
+            <select style="display: block; margin: 0 auto; border: 5px black solid; border-radius: 5px; text-align: center; height: fit-content; width: 50%; max-width: 500px; font-size: 20px;" id="tagSelector" multiple>
+                <option value="smb-tag">SMB</option>
+                <option value="nmap-tag">NMAP</option>
+                <option value="passwd-tag">Password cracking</option>
+                <option value="hash-tag">Hash cracking</option>
+                <option value="discovery-tag">Discovery/Enumeration</option>
+                <option value="exploitation-tag">Exploitation/Hacking</option>
+                <option value="updown-tag">Upload/Download</option>
+                <option value="persistence-tag">Persistence</option>
+                <option value="mysql-tag">MySQL</option>
+                <option value="splunk-tag">Splunk</option>
+                <option value="wireshark-tag">Wireshark</option>
+                <option value="kape-tag">KAPE</option>
+            </select>
+            <button style="display: block; margin: 0 auto; border: 5px black solid; border-radius: 5px; text-align: center; height: fit-content; width: 50%; max-width: 500px; font-size: 20px; margin-top: 10px; margin-bottom: 10px;" onclick="search()">Search</button>
+            <h2 id="search-header" style="display: none;">Results</h2>
+            <div class="section-wrapper" style="display: none; animation: none; border: 2px black solid;" id="results"></div>
+            <p style="text-align: center; font-size: .75em;">This is an extremely rudimentary search system, pages are simply tagged with a tag and then the resulting matches are shown when searched for. They are manually added to a list of results. I was lazy an didn't want to actually make a search engine.</p>
+        </div>
+    </body>
+</html>
