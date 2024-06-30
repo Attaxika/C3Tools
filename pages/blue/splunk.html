@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../../styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.3.js"/>
+        <title>Splunk</title>
+    </head>
+    <body>
+        <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+        <div class="border-div">
+            <h1>Splunk</h1>
+            <div class="section-wrapper" id="splunk-overview">
+                <h2>Overview</h2>
+                <h3>Indexer</h3>
+                <p>Splunk indexer processes data it receives from the forwarder and organizes it, then stores them as events</p>
+                <h3>Search Head</h3>
+                <p>Search head is used to search through the indexed logs, you can also use it to create visualizations of the data</p>
+                <h3>Forwarder</h3>
+                <p>Splunk forwarder is used to collect data and send it to Splunk.</p>
+                <ul>
+                    <li>Key data sources
+                        <ul>
+                            <li>Web server generating traffic</li>
+                            <li>Windows machine generating event logs, Powershell and Sysmon data</li>
+                            <li>Linux host generating host-centric logs</li>
+                            <li>Database generating responses</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="section-wrapper" id="splunk-nav">
+                <h2>Splunk Navigation</h2>
+                <h3>Splunk Bar</h3>
+                <ul>
+                    <li>Messages
+                        <ul>
+                            <li>System-level messages</li>
+                        </ul>
+                    </li>
+                    <li>Settings
+                        <ul>
+                            <li>Configuration settings</li>
+                        </ul>
+                    </li>
+                    <li>Activity
+                        <ul>
+                            <li>Progress of jobs</li>
+                        </ul>
+                    </li>
+                    <li>Help
+                        <ul>
+                            <li>Tutorials/Documentation</li>
+                        </ul>
+                    </li>
+                    <li>Find
+                        <ul>
+                            <li>Search feature</li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Apps Panel</h3>
+                <p>Installed applications can be listed and accessed here (Default app is "Search & Reporting")</p>
+                <h3>Explore Splunk</h3>
+                <p>Quick access links to add data to splunk (Apps, data, documentation, etc.)</p>
+                <h3>Splunk Dashboard</h3>
+                <p>Visualizations of data in Splunk</p>
+            </div>
+            <div class="section-wrapper" id="splunk-search">
+                <h2>Splunk Searches</h2>
+                <p>Splunk's searches can be accessed via the search tab. Example page is below:</p>
+                <div class="section-wrapper" style="padding-top: 10px; background: rgb(50,50,50);">
+                    <img src="../../images/splunk-search.png" width="100%">
+                    <p style="color: white;">As you can see above, a basic search page is shown. You can change the timeline using the dropdown menu to adjust accordingly. Within the search bar, you can enter your search terms.</p>
+                </div>
+                <p>Splunk has a query language called "Search Processing Language" and follows the syntax as such. This query language follows a structure where searches are made extremely easy (similar to Kibana Query Language), but also incorporates a lot of functionality through the use of commands (similar to Structured Query Language) and fields. <span style="background: yellow;">Splunk searches can take a bit to complete, wait about a minute or so before moving on from a potential search</span></span></p>
+                <p>Splunk's commands can be found here: <a href="https://docs.splunk.com/Documentation/SplunkCloud/9.1.2312/SearchReference/ListOfSearchCommands" target="_blank">Splunk commands</a></p>
+                <br>
+                <p>An example search query is:</p>
+                <span class="code">index="MyIndex" src_ip=192.168.0.1 dst_ip=192.168.0.2 sourcetype="stream:smtp" Gerald</span>
+                <p>The above search uses the index "MyIndex", the "MyIndex" index has the fields "src_ip" and "dst_ip" configured. The sourcetype field identifies an SMTP (Simple Mail Transfer Protocol) stream, and we are searching for the string "Gerald"</p>
+                <p class="ind">To simplify: We are searching for e-mail traffic between the two hosts above which contain the string "Gerald" in "MyIndex"</p>
+                <p>Helpful Splunk Query Language Commands:</p>
+                <ul>
+                    <li>dedup - Remove duplicates <span class="code">| dedup Image</span></li>
+                    <li>contains - Search for a string within a field <span class="code">Image contains Gerald</span></li>
+                    <li>AND - Search for a term that must be true along with another term that must be true <span class="code">Image CONTAINS Gerald AND dst_ip=192.168.0.2</span></li>
+                    <li>OR - Search for a term that must be true or another term that must be true <span class="code">Image CONTAINS Gerald OR dst_ip=192.168.0.2</span></li>
+                    <li>table - Generate a table based on a set of fields <span class="code">| table src_ip,timestamp</span></li>
+                </ul>
+                <span style="background: yellow;">FIELDS ARE PER INDEX, NOT ALL INDEXES WILL HAVE THE SAME FIELDS BASED ON THE DATA THEY CONTAIN</span>
+            </div>
+        </div>
+    </body>
+</html>

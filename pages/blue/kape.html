@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../../styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.3.js"/>
+        <title>KAPE</title>
+    </head>
+    <body>
+        <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+        <div class="border-div">
+            <h1 style="display: inline-block;">KAPE</h1>
+            <p>Kroll Artifact Parser and Extractor</p>
+            <div class="section-wrapper">
+                <h2>KAPE Process</h2>
+                <div id="center" style="display: flex; justify-content: center;">
+                    <div class="inline-div">
+                        <h3>1. Source</h3>
+                        <p>Live system mounted image F-response</p>
+                    </div>
+                    <div class="inline-div">
+                        <h3>2.KAPE</h3>
+                        <p>Target options</p>
+                    </div>
+                    <div class="inline-div">
+                        <h3>3. Destinations</h3>
+                        <p>Files from source are copied here</p>
+                    </div>
+                    <div class="inline-div">
+                        <h3>4. KAPE</h3>
+                        <p>Module options</p>
+                    </div>
+                    <div class="inline-div">
+                        <h3>5. Module Output</h3>
+                        <p>Programs run against destination files</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-wrapper">
+                <h2>Target Options</h2>
+                <p>Targets - Artifacts that need to be collected from a system or image</p>
+                <h4>Example of a target file</h4>
+                <div class="inline-div" style="background: white; width: fit-content; padding: 5px; text-align: left; line-height: 5px;">
+                    <p>Description: Prefetch files</p>
+                    <p>Author: Example author</p>
+                    <p>Version: 1.0</p>
+                    <p>Id: Example ID</p>
+                    <p>RecreateDirectories: true</p>
+                    <p>Targets:</p>
+                    <p>&emsp;-</p>
+                    <p>&emsp;&emsp;Name: Prefetch</p>
+                    <p>&emsp;&emsp;Category: Prefetch</p>
+                    <p>&emsp;&emsp;Path: C:\Windows\prefetch\</p>
+                    <p>&emsp;&emsp;FileMask: '*.pf'</p>
+                    <p>&emsp;-</p>
+                    <p>&emsp;&emsp;Name: Prefetch</p>
+                    <p>&emsp;&emsp;Category: Prefetch</p>
+                    <p>&emsp;&emsp;Path: C:\Windows.old\Windows\prefetch\</p>
+                    <p>&emsp;&emsp;FileMask: '*.pf'</p>
+                    <br>
+                    <p># Documentation</p>
+                    <p># ExampleLinksHere</p>
+                </div>
+                <p>This TKAPE file tells KAPE to collect files with the file mask *.pf from the path C:\Windows\prefetch and C:\Windows.old\prefetch.</p>
+                <br>
+                <p>Compound targets - Targets that are compounds of multiple other targets. Compound targets help us collect multiple targets by providing a single a command</p>
+                <h4>Example of a compound target file</h4>
+                <div class="inline-div" style="background: white; width: fit-content; padding: 5px; text-align: left; line-height: 5px;">
+                    <p>Description: Prefetch files</p>
+                    <p>Author: Example author</p>
+                    <p>Version: 1.0</p>
+                    <p>Id: Example ID</p>
+                    <p>RecreateDirectories: true</p>
+                    <p>Targets:</p>
+                    <p>&emsp;-</p>
+                    <p>&emsp;&emsp;Name: Prefetch</p>
+                    <p>&emsp;&emsp;Category: Prefetch</p>
+                    <p>&emsp;&emsp;Path: Prefetch.tkape</p>
+                    <p>&emsp;-</p>
+                    <p>&emsp;&emsp;Name: RecentFileCache</p>
+                    <p>&emsp;&emsp;Category: ApplicationCompatibility</p>
+                    <p>&emsp;&emsp;Path: RecentFileCache.tkape</p>
+                    <p>&emsp;-</p>
+                    <p>&emsp;&emsp;Name: Syscache</p>
+                    <p>&emsp;&emsp;Category: Syscache</p>
+                    <p>&emsp;&emsp;Path: Syscache.tkape</p>
+                    <br>
+                    <p># Documentation</p>
+                    <p># N/A</p>
+                </div>
+                <p>The above Compound Target will collect evidence of execution from Prefetch, RecentFileCache, and Syscache targets</p>
+                <br>
+                <p>Targets use the ".tkape" extension</p>
+                <br>
+                <h3>!Disabled</h3>
+                <p>This directory contains Targets that you want to keep in the KAPE instance, but don't want them to appear in the active Targets list</p>
+                <br>
+                <h3>!Local</h3>
+                <p>This directory contains targets that will not sync with the KAPE Github repository</p>
+            </div>
+            <div class="section-wrapper">
+                <h2>Module Options</h2>
+                <p>Modules - Run specific tools against the provided set of files. Run some command(s) and store the output (generally in CSV or TXT)</p>
+                <p>Example of a module file</p>
+                <div class="inline-div" style="background: white; width: fit-content; padding: 5px; text-align: left; line-height: 5px;">
+                    <p>Description: IPConfig</p>
+                    <p>Category: LiveResponse</p>
+                    <p>Author: Mike Cary</p>
+                    <p>Version: 1.0</p>
+                    <p>Id: Example ID</p>
+                    <p>ExportFormat: txt</p>
+                    <p>Processors:</p>
+                    <p>&emsp;-</p>
+                    <p>&emsp;&emsp;Executable: C:\Windows\System32\ipconfig.exe</p>
+                    <p>&emsp;&emsp;CommandLine: /all</p>
+                    <p>&emsp;&emsp;ExportFormat: txt</p>
+                    <p>&emsp;&emsp;ExportFile: ipconfig.txt</p>
+                    <br>
+                    <p># Documentation</p>
+                    <p># ExampleLinkshere</p>
+                </div>
+                <br>
+                <h3>The bin directory</h3>
+                <p>The bin directory contains executables we want to run on the system but are not usually natively present on most systems. Many of these binaries will be required for KAPE modules</p>
+                <br>
+                <p>Module files use the ".mkape" extension</p>
+            </div>
+            <div class="section-wrapper">
+                <h2>GKAPE (KAPE GUI)</h2>
+                <p>GKAPE is a GUI for KAPE. You can run the GUI by opening gkape.exe</p>
+                <p>Image below courtesy of kape room on TryHackMe (click for full image):</p>
+                <div class="click-img" onclick="enlarge('gkape')">
+                    <img id="gkape" width=100%; src="../../images/gkape.png">
+                </div>
+                <br>
+                <p>GKAPE will essentially generate a KAPE command, which will be run after clicking "execute!" in the GUI</p>
+                <p>The KAPE CLI will not be covered here, but you can see available options by opening an elevated command line, navigating to the kape.exe, and running it through the command line interface</p>
+            </div>
+        </div>
+        <script>
+            function enlarge(id) {
+                var img = document.getElementById(id);
+                var enlargedDiv = document.getElementById('enlargedDiv');
+                if (!enlargedDiv) {
+                    enlargedDiv = document.createElement('div');
+                    enlargedDiv.id = 'enlargedDiv';
+                    enlargedDiv.style.position = 'fixed';
+                    enlargedDiv.style.top = '0';
+                    enlargedDiv.style.left = '0';
+                    enlargedDiv.style.width = '100%';
+                    enlargedDiv.style.height = '100%';
+                    enlargedDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                    enlargedDiv.style.display = 'flex';
+                    enlargedDiv.style.justifyContent = 'center';
+                    enlargedDiv.style.alignItems = 'center';
+                    enlargedDiv.style.zIndex = '1000';
+                    var enlargedImg = img.cloneNode();
+                    enlargedImg.style.width = '80%';
+                    enlargedImg.style.height = 'auto';
+                    enlargedImg.style.maxWidth = '100vw';
+                    enlargedImg.style.maxHeight = '100vh';
+                    enlargedDiv.appendChild(enlargedImg);
+                    document.body.appendChild(enlargedDiv);
+                    enlargedDiv.addEventListener('click', function() {
+                        document.body.removeChild(enlargedDiv);
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>

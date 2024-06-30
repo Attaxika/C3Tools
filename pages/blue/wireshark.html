@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="../../styles/styles.css"/>
+    <link rel="script" href="./scripts/cachebuster1.3.js"/>
+    <title>Wireshark</title>
+</head>
+<body>
+    <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+    <div class="border-div">
+        <h1>Wireshark</h1>
+        <p>Wireshark is a network traffic analysis program, which can be used to individually analyze packets and different kinds of conversations</p>
+        <p>Download <a href="https://www.wireshark.org/download.html">Here</a></p>
+
+        <h2>Toolbar</h2>
+        <h3>File</h3>
+        <p>The file menu primarily allows you to open and save PCAPs, along with reassembling detected objects</p>
+        <h3>Edit</h3>
+        <p>Edit is primarily going to be used to change your preferences (there are some options that can be changed in view here as well). In preferences, you may want to change/add columns, which can show additional information per packet</p>
+        <h3>View</h3>
+        <p>You can change various options that affect the way Wireshark looks here. You can change coloring options, time formatting, etc.</p>
+        <h3>Capture</h3>
+        <p>The capture menu will allow you to start and stop captures, allowing you to adjust options in relation to your capture</p>
+        <h3>Analyze</h3>
+        <p>You can use and apply readily-available/commonly-used filters here</p>
+        <h3>Statistics</h3>
+        <p>Statistics has some notable items within it</p>
+        <ul>
+            <li>Resolved addresses - This will show you all the IP addresses that have been resolved to a MAC/Hostname</li>
+            <li>Protocol hierarchy - This will show you a list of the different protocols that have been used with a count</li>
+            <li>Conversations - This will show you conversations between two machines, including the ports that are being used in the conversation</li>
+        </ul>
+        <h2>Packet investigation windows</h2>
+        <p>Example tree viewer below:</p>
+        <img style="width: 100%;" src="../../images/packet-windows.png">
+        <p>Image courtesy of wiersharkthebasics room on TryHackMe</p>
+        <h3>Packet list</h3>
+        <p>The packet list will show you all the captured packets with their respective time captured (changeable in the "view" menu, source and destination IPs and ports, along with protocol, packet length, information, and any other user-customized columns</p>
+        <h3>Packet details</h3>
+        <p>Clicking on a packet will bring up both the packet details and packet bytes. The packet details page will show you all parts of the packet, which can be expanded by clicking on the dropdown menu next to the packet portion</p>
+        <h3>Packet bytes</h3>
+        <p>The packet bytes will show you the raw bytes of the packet, which can be used to in the search or in snort rules to find packets that may not be matched on a string</p>
+        <h2>Display Filters</h2>
+        <p>There are many tags that can be searched for, instead of listing them all, I will provide an example search below</p>
+        <p><span class="code">(tcp && ip.addr == 192.168.0.1 && tcp.dstport == 8000) || (udp && ip.addr == 192.168.0.1 && udp.dstport == 8000) </span></p>
+        <ul class="ul-format">
+            <li><span class="code">(tcp && ip.addr == 192.168.0.1 && tcp.dstport == 8000)</span>
+                <ul>
+                    <li>() - Parentheses will allow you to nest filters</li>
+                    <li>tcp - Filter for TCP traffic only</li>
+                    <li> && - Logical AND operator</li>
+                    <li>ip.addr == 192.168.0.1 - IP address filter</li>
+                    <li>tcp.dstport == 8000 - TCP destination port filter</li>
+                </ul>
+            </li>
+            <li><span class="code"> || (udp && ip.addr == 192.168.0.1 && udp.dstport == 8000)</span>
+                <ul>
+                    <li>|| - Logical OR operator</li>
+                    <li>udp - Filter for UDP traffic only</li>
+                    <li>udp.dstport == 8000 - UDP destination port filter</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Other search methods</h2>
+        <p>You can also click on the magnifying glass icon ("Find a packet"), which can be a quick way to search for strings and hex values</p>
+    </div>
+</body>
+</html>
