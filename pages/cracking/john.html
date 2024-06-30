@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../../styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.3.js"/>
+        <title>John Suite</title>
+    </head>
+    <body>
+        <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+        <div class="border-div">
+            <div style="padding-bottom: 10px;">
+                <h1 style="display: inline-block;">John Suite</h1>
+                <img style="float: right;" src="../../images/john.jpg" width="50px" alt="john suite logo">
+            </div>
+            <pre id="john" ></pre>
+            <div class="section-wrapper">
+                <h2>John</h2>
+                <p>John The Ripper is an open source toolsuite used to crack hashes and passwords</p>
+                <a class="inlay-link" href="https://openwall.com/john">Download</a>
+                <p>Usage:</p>
+                <span class="code">john --format=hashformat --wordlist=/path/to/wordlist /path/to/hashes.txt</span>
+                <p class="ind">--format is a non-required field, but will (typically) yield better results when used, it specifies the encryption format (Ex. md5crypt)</p>
+            </div>
+            <pre id="unshadow"></pre>
+            <div class="section-wrapper">
+                <h2>Unshadow</h2>
+                <p>Unshadow is a program used to combine the /etc/passwd and the /etc/shadow files so that john can use them.</p>
+                <ul>
+                    <li>/etc/passwd contains users and corresponding information  for those users essentially (users, groups, IDs, etc.)</li>
+                    <li>/etc/shadow contains the hashed password for each user</li>
+                </ul>
+                <p>Usage:</p>
+                <span class="code">unshadow passwdfile shadowfile > output.txt</span>
+            </div>
+            <pre id="zip2john"></pre>
+            <div class="section-wrapper">
+                <h2>Zip2John</h2>
+                <p>Zip2John is a program used to convert zip files to hashes</p>
+                <p>Usage:</p>
+                <span class="code">zip2john zipfile.zip > output.txt</span>
+            </div>
+            <pre id="rar2john"></pre>
+            <div class="section-wrapper">
+                <h2>Rar2John</h2>
+                <p>Rar2John is a program used to convert rar files to hashes</p>
+                <p>Usage:</p>
+                <span class="code">rar2john zipfile.rar > output.txt</span>
+            </div>
+            <pre id="ssh2john"></pre>
+            <div class="section-wrapper">
+                <h2>Ssh2John</h2>
+                <p>Ssh2John is a program used to convert ssh files to hashes</p>
+                <p>Usage:</p>
+                <span class="code">ssh2john id_rsa > output.txt</span>
+            </div>
+        </div>
+    </body>
+</html>
