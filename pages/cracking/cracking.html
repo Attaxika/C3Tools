@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../../styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.3.js"/>
+        <title>Other Cracking Utilities</title>
+    </head>
+    <body style="height: 100%;">
+        <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+        <div class="border-div">
+            <h1>Cracking Utilities</h1>
+            <pre id="hydra" ></pre>
+            <div class="section-wrapper">
+                <div>
+                    <h2 style="display: inline-block;">Hydra</h2>
+                    <img style="float: right;" src="../../images/hydra-logo.svg" width="100px">
+                </div>
+                <p>Hydra is an open source password cracking tool designed to take in a word list and a user/userlist. Hydra is typically used with dictionary attacks</p>
+                <p>Usage:</p>
+                <span class="code">hydra -T 4 -l mike -P /usr/share/wordlists/rockyou.txt -vV 192.168.0.1 protocol</span>
+                <p class="ind">-T #: Number of parallel connections to targets (threads)</p>
+                <p class="ind">-l user: Username</p>
+                <p class="ind">-L file: Username wordlist</p>
+                <p class="ind">-p password: Password</p>
+                <p class="ind">-P file: Password wordlist</p>
+                <p class="ind">-vV: Verbosity (5 is max)</p>
+                <p class="ind">192.168.0.1: Target IP</p>
+                <p class="ind">protocol: Protocol to use (Ex. ftp, ssh)</p>
+                <p>Example HTTP login form brute force:</p>
+                <span class="code">hydra -l milesdyson -P /root/Desktop/log1.txt 10.10.180.153 http-post-form "/squirrelmail/src/redirect.php:login_username=^USER^&secretkey=^PASS^:incorrect"</span> - php
+                <span class="code">hydra -l admin -P /usr/share/wordlists/rockyou.txt 192.168.0.1 http-post-form "/admin/:user=^USER^&pass=^PASS^:Username or password incorrect"</span> - no php
+                <br>
+                <p>Commonly used wordlists with Hydra:</p>
+                <p class="ind">/usr/share/wordlists/rockyou.txt - Common password wordlist, may be a .gz, you may need to unzip using gunzip</p>
+                <p class="ind">/usr/share/wordlists/fasttrack.txt - Common password wordlist</p>
+                <p class="ind">/usr/share/wordlists/metasploit/unix_users.txt - Username wordlist</p>
+                <p class="ind">/usr/share/wordlists/metasploit/unix_passwords.txt - Password wordlist</p>
+            </div>
+            <pre id="hashcat"></pre>
+            <div class="section-wrapper">
+                <h2>Hashcat</h2>
+                <p>Hashcat is a "password recovery tool" similar to john in functionality. Hashcat has a lot of options, I would recommend looking at them either in your terminal <span class="code">man hashcat</span> or <a target="_blank" href="https://manpages.org/hashcat">online</a></p>
+                <p>Usage:</p>
+                <span class="code">hashcat -m hashtype hash_file wordlist</span>
+                <p class="ind">-m hashtype: Specifies hashing algorithm to crack, list available at <a target="_blank" href="https://manpages.org/hashcat">manpages.org/hashcat</a></p>
+                <p class="ind">hash_file: Hash file to crack</p>
+                <p class="ind">&emsp; If your hash type is salted, your salt will usually be separated with a :</p>
+                <p class="ind">wordlist: Wordlist to use</p>
+            </div>
+        </div>
+    </body>
+</html>
