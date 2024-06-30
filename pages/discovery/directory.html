@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="../../styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.3.js"/>
+        <title>Directory Enumeration</title>
+    </head>
+    <body>
+        <button class="home-button" onclick="window.location.href='../../index.html'">Home</button>
+        <div class="border-div">
+            <h1>Directory Enumeration</h1>
+            <pre id="gobuster"></pre>
+            <div class="section-wrapper">
+                <h2>Gobuster</h2>
+                <p>Gobuster is a program meant for enumerating available/visible directories on a target</p>
+                <p>Usage:</p>
+                <span class="code">gobuster dir --url http://192.168.0.1 --wordlist /usr/share/wordlists/dirb/common.txt</span>
+                <p class="ind">--url: Target URL</p>
+                <p class="ind">--wordlist: Wordlist to use</p>
+                <p class="ind">The "dir" keyword here tells gobuster to look for directories, this can be changed to other keywords, like "dns" to find dns subdomains for example</p>
+                <p>Gobuster is not on the machines for the EJPT</p>
+            </div>
+            <pre id="dirb"></pre>
+            <div class="section-wrapper">
+                <h2>Dirb</h2>
+                <p>Dirb is a scanner designed for specifically http-based webservers, it is used to find directories and files</p>
+                <p>Usage:</p>
+                <span class="code">dirb http://192.168.0.1 /usr/share/wordlists/dirb/common.txt</span>
+                <p class="ind">dirb automatically goes into subdirectories (recursive)</p>
+                <p>Sidenote: dirb will typically yield more results than gobuster, just due to the default configuration of dirb</p>
+                <p>Wordlists:</p>
+                <ul>
+                    <li>/usr/share/wordlists/dirb/common.txt</li>
+                    <li>/usr/share/wordlists/dirb/big.txt</li>
+                </ul>
+            </div>
+            <pre id="dirbuster"></pre>
+            <div class="section-wrapper">
+                <h2>Dirbuster</h2>
+                <p>Similar to dirb and gobuster, dirbuster is intended to brute force directories and files on servers, unlike gobuster and dirb, it has a GUI as its primary form of usage</p>
+                <p>Usage:</p>
+                <span class="code">dirbuster -u http://example.com</span>
+                <p>Don't bother with dirbuster, you can use the dictionaries from it, but it's pretty much the same as dirb unless you want to use the GUI</p>
+            </div>
+            <pre id="find"></pre>
+            <div class="section-wrapper">
+                <h2>Find</h2>
+                <p>Find is a bsaic unix command designed to find a file when given a directory and a pattern to search, this can be used to search for desired files</p>
+                <p>Usage:</p>
+                <span class="code">find / -name "filename.ext"</span>
+                <p class="ind">Searches for "filename.ext" in / (root directory) and all subdirectories</p>
+                <p class="ind">&emsp; Windows equivalent: where /r c:\ file.txt</p>
+                <span class="code">find / -name "*.ext"</span>
+                <p class="ind">Searches for all files with the extension ".ext" in / (root directory) and all subdirectories</p>
+                <p class="ind">* is the wildcard operator, essentially meaning any length of normal characters</p>
+                <span class="code">find / -not -type l -perm -o+w</span>
+                <p class="ind">find file in root directory and all subdirectories <span style="background: yellow;">(find /)</span> that are not a symbolic link <span style="background: yellow;">(-not type -l)</span> and that are not writable by others (everyone) <span style="background: yellow;">(-perm -o+w)</span></p>
+            </div>
+        </div>
+    </body>
+</html>
