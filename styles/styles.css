@@ -1,0 +1,223 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0, 1), rgba(0,0,0,.85));
+    margin: 10px;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 100%;
+    animation: fadeIn 1s ease-in;
+}
+body * {
+    overflow-wrap: break-word;
+}
+
+.border-div {
+    background: darkgray;
+    padding: 10px;
+    position: relative;
+    border-radius: 20px;
+    border: black 10px solid;
+    box-shadow: inset 0 0 20px black;
+    margin: 10px;
+    animation: fadeIn 1s ease-in;
+}
+.ind {
+    padding-left: 2em;
+}
+.home-button {
+    background: gray;
+    border-radius: 5px;
+    border: 2px white solid;
+    box-shadow: red 0 0 10px;
+    padding: 5px;
+}
+.home-button:hover {
+    background: white;
+    color: black;
+}
+.home-button a {
+    text-decoration: none;
+    color: white;
+}
+.home-button:hover a {
+    color: black;
+}
+.click-open {
+    display: none;
+    color: white;
+}
+.click-header {
+    display: block;
+    width: fit-content;
+    color: white;
+    cursor: pointer; 
+    user-select: none;
+}
+.click-header:hover {
+    color: red;
+}
+.code {
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 2px;
+    display: inline-block;
+    background: rgba(0,0,0, 1);
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    color: lime;
+    user-select: all;
+}
+.section-wrapper {
+    position: relative;
+    background: rgba(100, 100, 100, 1);
+    box-shadow: black 0 0 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    animation: slideUp 1s ease-out forwards;
+    border-radius: 5px;
+}
+.section-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid;
+    border-radius: 5px;
+    z-index: -1;
+}
+h1 {
+    text-decoration: underline;
+}
+.hl-both::after {
+    content: "[BOTH]";
+    background: yellow; 
+    color: black; 
+    border-radius: 5px;
+    display: inline-block;
+}
+.hl-pass::after {
+    content: "[PASS]";
+    background: red; 
+    color: white; 
+    border-radius: 5px;
+    display: inline-block;
+}
+.hl-hash::after {
+    content: "[HASH]";
+    background: orange; 
+    color: black; 
+    border-radius: 5px;
+    display: inline-block;
+}
+.inlay-link::before {
+    content: "[+]\00a0";
+}
+.inlay-link {
+    display: block;
+    text-decoration: none;
+    color: white;
+    width: fit-content;
+}
+.inlay-link:hover {
+    color: red;
+}
+.ul-format {
+    font-size: 20px;
+}
+.mkdwn-img {
+    height: 30px; 
+    display: inline-block;
+    overflow: none;
+    transition: transform 2s;
+    position: relative;
+}
+.mkdwn-img:hover {
+    transform: scale(1.75);
+}
+.explain-me {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+.font-size-wrapper {
+    font-size: 30px;
+}
+.explain-me-cont {
+    border-radius: 5px;
+    border: 2px solid white;
+    display: none;
+    position: absolute;
+    top: -75px;
+    width: 200px;
+    height: fit-content;
+    text-align: center;
+    font-size: 15px;
+    z-index: 2;
+}
+.explain-me:hover {
+    text-decoration: underline;
+    background: gray;
+}
+.explain-me:hover .explain-me-cont {
+    display: inline-block;
+}
+.drop-wrapper {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+}
+.drop-wrapper:hover {
+    text-decoration: underline;
+}
+.drop-wrapper-cont {
+    position: absolute;
+    width: fit-content;
+    white-space: nowrap;
+    z-index: 2;
+    display: none;
+    top: -5px;
+    left: 100px;
+    box-shadow: 0px 0px 10px black;
+    background: rgba(0, 0, 0, 1);
+    border-radius: 5px;
+    border: 2px white solid;
+}
+.drop-wrapper:hover .drop-wrapper-cont {
+    display: block;
+}
+.inline-div {
+    display: inline-block;
+    width: 150px;
+    height: fit-content;
+    background: gray;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    overflow-wrap: break-word;
+    margin: 5px;
+}
