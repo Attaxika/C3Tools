@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <charset="utf-8"/>
+        <!--NO CMS? >:O-->
+        <link rel="stylesheet" href="./styles/styles.css"/>
+        <link rel="script" href="./scripts/cachebuster1.7.js"/> <!--There's no server backend handling this call, you can't hack this one, don't worry ;)-->
+        <title>C3 Wiki</title>
+    </head>
+    <body>
+        <div class="border-div">
+            <h1 style="text-align: center; font-size: 50px;">C3 Wiki</h1>
+            <div class="section-wrapper" style="background: white; border-radius: 5px; padding: 10px;">
+                <h2 style="text-align: center; margin: 0; text-decoration: underline;">Info:</h3>
+                <p style="margin: 0;">Links will become <span style="color: red;">red</span> on hover</p>
+                <p style="margin: 0;">Menus will appear over certain items (Those without a [+])</p>
+                <p style="margin: 0;">Some items may be in a different category than expected due to the primary nature of the script/program</p>
+                <p style="margin: 0;">If you haven't visited this page in a while, you may want to press ctrl+shift+r to refresh and clear your stored cache</p>
+            </div>
+            <div style= "display: block; margin-left: auto; margin-right: auto; width: 15%; height: fit-content !important; text-align: center; border: 2px black solid; padding: 2px; background: white; border-radius: 5px; margin-bottom: 10px;">
+                <h4 id="search" style="text-align: center; margin: 0;"><a style="color: red; text-decoration: none;" href="./pages/search/search.html">Search</a></h4>
+            </div>
+            <div class="border-div" style="border-width: 2px; background: gray; box-shadow: 0 0 10px black; margin: 0px;">
+                <h1 style="text-align: center;">Red</h1>
+                <div class="section-wrapper" style="z-index: 1;">
+                    <h1>Hash & Password Cracking</h1>
+                    <ul class="ul-format" style="color: white;">
+                        <li>
+                            <div class="drop-wrapper"><span class="hl-both ">John Suite&nbsp;</span>
+                                <div class="drop-wrapper-cont">
+                                    <a class="inlay-link" href="./pages/cracking/john.html#john"><span class="hl-pass">john&nbsp;</span></a>
+                                    <a class="inlay-link" href="./pages/cracking/john.html#unshadow"><span class="hl-pass">unshadow&nbsp;</span></a>
+                                    <a class="inlay-link" href="./pages/cracking/john.html#zip2john"><span class="hl-hash">zip2john&nbsp;</span></a>
+                                    <a class="inlay-link" href="./pages/cracking/john.html#rar2john"><span class="hl-hash">rar2john&nbsp;</span></a>
+                                    <a class="inlay-link" href="./pages/cracking/john.html#ssh2john"><span class="hl-hash">ssh2john&nbsp;</span></a>
+                                </div>
+                            </div>
+                        </li>
+                        <li><a class="inlay-link hl-pass" href="./pages/cracking/cracking.html#hydra">Hydra&nbsp;</a></li>
+                        <li><a class="inlay-link hl-hash" href="./pages/cracking/cracking.html#hashcat">Hashcat&nbsp;</a></li>
+                        <li><a class="inlay-link hl-hash" href="https://hashes.com/en/decrypt/hash" target="_blank">hashes.com&nbsp;</a></li>
+                        <li><a class="inlay-link hl-hash" href="https://crackstation.net/" target="_blank">Crackstation&nbsp;</a></li>
+                    </ul>
+                </div>
+                <div class="section-wrapper">
+                    <h1>Discovery/Enumeration</h1>
+                    <h2>Directory</h2>
+                    <ul class="ul-format">
+                        <li><a class="inlay-link" href="./pages/discovery/directory.html#gobuster">gobuster</a></li>
+                        <li><a class="inlay-link" href="./pages/discovery/directory.html#dirb">dirb</a></li>
+                        <li><a class="inlay-link" href="./pages/discovery/directory.html#dirbuster">dirbuster</a></li>
+                        <li><a class="inlay-link" href="./pages/discovery/directory.html#find">find/where</a></li>
+                    </ul>
+                    <h2>Protocol Enumeration</h2>
+                    <ul class="ul-format">
+                        <li><a class="inlay-link" href="./pages/discovery/protocol-enum.html#enum4linux">Enum4Linux</a></li>
+                        <li><a class="inlay-link" href="./pages/discovery/protocol-enum.html#nmap">NMAP</a></li>
+                        <li><a class="inlay-link" href="./pages/discovery/protocol-enum.html#dnsenum">DNSenum and Dig</a></li>
+                        <li><a class="inlay-link" href="./pages/discovery/protocol-enum.html#rpcclient">RPCClient</a></li>
+                    </ul>
+                    <h2>System Info Enumeration</h2>
+                    <ul class="ul-format">
+                        <li><a class="inlay-link" href="./pages/discovery/system-enum.html#meterpreter">Meterpreter (Any OS)</a></li>
+                        <li><a class="inlay-link" href="./pages/discovery/system-enum.html#windows">Windows</a></li>
+                        <li><a class="inlay-link" href="./pages/discovery/system-enum.html#linux">Linux</a></li>
+                    </ul>
+                </div>
+                <div style="z-index: 1;" class="section-wrapper">
+                    <h1>Exploitation</h1>
+                    <ul class="ul-format">
+                        <li>
+                            <div class="drop-wrapper"><span style="color: white;">Metasploit Suite</span>
+                                <div class="drop-wrapper-cont">
+                                    <a class="inlay-link" href="./pages/exploitation/metasploit.html#meterpreter">Meterpreter</a>
+                                    <a class="inlay-link" href="./pages/exploitation/metasploit.html#msfconsole">Metasploit Framework Console<span style="font-size: 10px; padding-right: 2px; color: green;">(msfconsole)</span></a>
+                                    <a class="inlay-link" href="./pages/exploitation/metasploit.html#searchsploit">Searchsploit</a>
+                                    <a class="inlay-link" href="./pages/exploitation/metasploit.html#msfvenom">Msfvenom</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="drop-wrapper"><span style="color: white;">Other Exploitation Tools</span>
+                                <div class="drop-wrapper-cont">
+                                    <a class="inlay-link" href="./pages/exploitation/other_exploitation.html#smbmap">SMBMap</a>
+                                    <a class="inlay-link" href="./pages/exploitation/other_exploitation.html#linpeas">LinPEAS/WinPEAS</a>
+                                    <a class="inlay-link" href="./pages/exploitation/other_exploitation.html#wpscan">WPScan</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section-wrapper">
+                    <h1>File Downloads / Uploads</h1>
+                    <ul class="ul-format">
+                        <li><a class="inlay-link" href="./pages/upload/updown.html#wget">wget</a></li>
+                        <li><a class="inlay-link" href="./pages/upload/updown.html#smbget">smbget</a></li>
+                        <li><a class="inlay-link" href="./pages/upload/updown.html#git">git clone</a></li>
+                        <li><a class="inlay-link" href="./pages/upload/updown.html#python">python web server</a></li>
+                        <li><a class="inlay-link" href="./pages/upload/updown.html#curl">curl</a></li>
+                        <li><a class="inlay-link" href="./pages/upload/updown.html#ftp">FTP (put/get)</a></li>
+                        <li><a class="inlay-link" href="./pages/upload/updown.html#certutil">certutil</a></li>
+                    </ul>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('connect')">Connecting to Services</a></h1>
+                    <div id="connect" class="click-open">
+                        <ul>
+                            <li>SMB - <span class="code">smbclient -L 192.168.0.1</span> - List shares</li>
+                            <li>SMB (Connect to share) <span class="code">smbclient //192.168.0.1/share -U user</span>
+                                <ul>
+                                    <li>Guest login: U: Guest P: Guest</li>
+                                </ul>
+                            </li>
+                            <li>SQL - <span class="code">mysql -h 192.168.0.1 -u username -ppassword database</span></li>
+                            <li> Netcat
+                                <ul>
+                                    <li>-l = listen<br>-p = LOCAL port (for listeners/reverse shells)<br>-n = no dns lookup<br>-v = verbose<br>-u = udp<br>-e = execute command<br>&emsp;Bind shell (Ran on victim): <span class="code">nc.exe -lnvp PORT -e cmd.exe</span><br>&emsp;Bind shell (Ran on attacker): <span class="code">nc 192.168.0.1 PORT</span><br>&emsp;Reverse shell: <span class="code">nc -lvnp PORT</span></li> <!-- This is lazy! :D-->
+                                </ul>
+                            </li>
+                            <li>RDP - <span class="code">xfreerdp /u:username /p:password /v:192.168.0.1:PORT</span></li>
+                            <li>FTP - <span class="code">ftp 192.168.0.1 port</span> (Will prompt for username and then prompt for password)
+                                <ul>
+                                    <li>Anonymous login: U: Anonymous P: (NONE, just press enter)</li>
+                                </ul>
+                            </li>
+                            <li>SSH - <span class="code">ssh user@192.168.0.1</span> OR <span class="code">ssh -i key_file user@192.168.0.1</span></li>
+                            <li>Telnet - <span class="code">telnet 192.168.0.1 PORT</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <pre id="commands-pre"></pre>
+                    <h1><a class="click-header" onclick="showItem('commands')">Other Helpful Commands</a></h1>
+                    <div id="commands" class="click-open">
+                        <ul>
+                            <li style="margin-bottom: 10px;"><span class="code">ip a | grep inet</span> - Your machine's IPs (UNIX only)</li>
+                            <li style="margin-bottom: 10px;"><span class="code">ip a | grep eth1</span> - Eth1 (Outward-facing Interface)</li>
+                            <li style="margin-bottom: 10px;"><span class="code">ipconfig /all | findstr /i ipv4</span> Your machine's IP (Windows only)</li>
+                            <li style="margin-bottom: 10px;"><span class="code">python -c 'import pty;pty.spawn("/bin/bash")'</span> - Stable shell generation</li>
+                            <li style="margin-bottom: 10px;"><span class="code">/bin/bash -i</span> - Interactive bash shell generation</li>
+                            <li style="margin-bottom: 10px;"><span class="code">sudo -l</span> - Show binaries that can be ran as root</li>
+                            <li style="margin-bottom: 10px;">chmod ### file &emsp; #1 = Owner permissions. #2 = Group permissions. #3 = "World" permissions. 7 = Total, 4 = Read, 2 = Write, 1 = Execute
+                                <ul>
+                                    <li style="margin-bottom: 10px;"><span class="code">chmod +r/+w/+x file</span> - Make file readable/writeable/executable</li>
+                                    <li style="margin-bottom: 10px;"><span class="code">chmod 777 file</span> - Set file permissions to 777</li>
+                                    <li style="margin-bottom: 10px;"><span class="code">chmod +t file</span> - Set sticky bit</li>
+                                </ul>
+                            </li>
+                            <li style="margin-bottom: 10px;"><span class="code">openssl passwd -1 -salt abc password</span> - Generate a password for /etc/shadow (When /etc/shadow is modifiable, weak permissions)</li>
+                            <li>SQL Commands
+                                <ul>
+                                    <li style="margin-bottom: 10px;"><span class="code">mysql -u username -ppassword -e "See below for commands"</span> - Generic sql command, use -h when using remote access</li>
+                                    <li style="margin-bottom: 10px;"><span class="code">mysql -u username -ppassword -d database_name -e "See below for commands"</span> - Generic sql command with database selection</li>
+                                    <li style="margin-bottom: 10px;"><span class="code">show databases;</span> - List databases</li>
+                                    <li style="margin-bottom: 10px;"><span class="code">use database_name;</span> - Select database</li>
+                                    <li style="margin-bottom: 10px;"><span class="code">show tables;</span> - Show tables within selected database</li>
+                                    <li style="margin-bottom: 10px;"><span class="code">select * from table_name;</span> - Select all rows from table</li>
+                                    <li>The above commands can be combined, as such: <span class="code">use database_name; select * from table_name;</span></li>
+                                </ul>
+                            </li>
+                            <li>PowerShell
+                                <ul>
+                                    <li>Searching recursively for file name: <span class="code">Get-ChildItem -Path C:\ -Include *FILENAME.EXT* -File -Recurse -ErrorAction SilentlyContinue</span></li>
+                                    <li>MD5Sum equivalent: <span class="code">Get-FileHash -Algorithm MD5 -Path FILENAME.EXT</span></li>
+                                    <li>List network connections: <span class="code">Get-NetTCPConnection</span></li>
+                                </ul>
+                            </li>
+                            <li><span style="background: yellow;">/etc/hosts - Local host resolution file, can be edited/viewed with cat/vim/nano</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('knowledge')">Other Helpful Knowledge</a></h1>
+                    <div id="knowledge" class="click-open">
+                        <h2 style="color: black;">Initiating connections</h2>
+                        <ul>
+                            <li>Bind shell - Attacker &rarr; Target (Target must be running a listener, call is made from the attacker)</li>
+                            <li>Reverse shell - Target &rarr; Attacker (Attacker must be running a listener, call is made from the target)</li>
+                        </ul>
+                        <h2 style="color: black;">Common exploitable ports</h2>
+                        <ul>
+                            <li>1524 - Ingreslock (UNIX) Connect via netcat</li>
+                            <li>139/445 - SMB (Enumerate Shares, brute force users/passwords, try anonymous logins, check for EternalBlue vulnerability (Windows SMBv1 without MS17-010 patch)</li>
+                            <li>5985/5986 - winrm</li>
+                        </ul>
+                        <h2 style="color: black;">Common Unix password hash types (/etc/shadow)</h2>
+                        <ul>
+                            <li>$1 - MD5</li>
+                            <li>$2 - Blowfish</li>
+                            <li>$5 - SHA-256</li>
+                            <li>$6 - SHA-512</li>
+                        </ul>
+                        <h2 style="color: black;">XSS (Cross-Site Scripting)</h2>
+                        <p>(Hover over each part for an explanation)</p>
+                        <p>SQL Injection example:</p>
+                        <div class=font-size-wrapper>
+                            <div class="explain-me">&lt;string&gt;
+                                <div class="explain-me-cont" style="background: green;">Input to initiate, can be any string or normal characters (non-escape)</div>
+                            </div>
+                            <div class="explain-me" >'
+                                <div class="explain-me-cont" style="background: red;">The escape character to exit out of text processing</div>
+                            </div>
+                            <div class="explain-me">OR 1=1
+                                <div class="explain-me-cont" style="background: blue;">Logical operation so that the program returns true</div>
+                            </div>
+                            <div class="explain-me">--
+                                <div class="explain-me-cont" style="background: yellow; color: black;">-- is a comment in SQL, so when the program interprets this it is used maliciously by us to end the program and return</div>
+                            </div>
+                            <p>Command injection payload list: <a href="https://github.com/payloadbox/command-injection-payload-list">github.com/payloadbox</a></p>
+                        </div>
+                        <h2 style="color: black;">DNS</h2>
+                        <ul>
+                            <li>A - Hostname &rarr; IPv4</li>
+                            <li>AAAA - Hostname/Domain &rarr; IPv6</li>
+                            <li>NS - Domain &rarr; Nameserver</li>
+                            <li>MX - Domain &rarr; Mailserver</li>
+                            <li>CNAME - Hostname &larr;&rarr; Hostname</li>
+                            <li>TXT - Text Record</li>
+                            <li>HINFO - Host Information</li>
+                            <li>SOA - Start of Authority (Domain Authority)</li>
+                            <li>SRV - Service Records</li>
+                            <li>PTR - IP &rarr; Hostname</li>
+                        </ul>
+                        <h2 style="color: black;">Change Management Systems (CMS)</h2>
+                        <ul>
+                            <li>Drupal
+                                <ul>
+                                    <li>Drupalgeddon</li>
+                                </ul>
+                            </li>
+                            <li>WordPress
+                                <ul>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="./pages/exploitation/other_exploitation.html#wpscan">WPScan</a>(Scanner to find vulnerabilities)</li>
+                                    <li>Wordpress reverse shell
+                                        <ol>
+                                            <li>Gain access to admin panel (Use <a class="inlay-link" style="display: inline !important;" href="./pages/exploitation/other_exploitation.html#wpscan">WpScan</a>)</li>
+                                            <li>Appearance &rarr; Theme File Editor &rarr; 404.php</li>
+                                            <li>Replace content of 404.php with shell <span style="background: yellow; color: black;">ENSURE THAT THE SHELL IS FOR THE OS OF THE WordPress MACHINE, ENSURE THAT YOU'VE CHANGED THE VARIABLES INSIDE OF THE REVERSE SHELL CODE (your IP, your listening port)</span> &rarr; Update File</li>
+                                            <li>Start a netcat listener (<span class="code">nc -lvnp PORT</span>), or use multi/handler in msfconsole to handle the connection from the target</li>
+                                            <li>Run the 404.php by calling it from the web browser. Keep note of target's wordpress theme. You can call it as such: <span class="code">http://TARGET:PORT/wordpress/wp-content/themes/THEMENAME/404.php</span></li>
+                                            <li>If necessary, you can (possibly) access the sql database on the server
+                                                <ul>
+                                                    <li>Open wp-config.php, the database information (user/password) may be shown</li>
+                                                    <li>mysql -u root -pPASSWORD -h 192.168.0.1</li>
+                                                </ul>
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 style="color: black;">Red Team Methodology (Hover for explanations)</h2>
+                        <p>
+                            <div class="explain-me">1. Reconnaissance
+                                <div class="explain-me-cont" style="background: green; top: 0px;">Gather information about target(s) (Ports, services, etc.) <a class="inlay-link" style="display: inline !important;" href="./pages/discovery/protocol-enum.html">Protocol Enumeration</a></div>
+                            </div> 
+                            <span style="font-size: 40px;">&rarr;</span>
+                            <div class="explain-me">2. Initial Access
+                                <div class="explain-me-cont" style="background: red; top: 0px;">Use the information gathered to penetrate into the target(s) using common vulnerabilities/exploits. <a class="inlay-link" style="display: inline !important;" href="./pages/exploitation/metasploit.html">Metasploit</a></div>
+                            </div> 
+                            <span style="font-size: 40px;">&rarr;</span>
+                            <div class="explain-me">3. Lateral Movement
+                                <div class="explain-me-cont" style="background: blue; top: 0px;">Gather information about the internal network. <a class="inlay-link" style="display: inline !important;" href="./pages/exploitation/metasploit.html">Metasploit</a>. <a class="inline-link" href="./pages/discovery/system-enum.html" style="display: inline !important;">system-enumeration</a></div>
+                            </div>
+                            <span style="font-size: 40px;">&rarr;</span>
+                            <div class="explain-me">4. Exploitation
+                                <div class="explain-me-cont" style="background: yellow; top: 0px; color: black;">Compromise devices, elevate privileges where necessary, extract information. <a class="inlay-link" style="display: inline !important; color: black;" href="./pages/discovery/system-enum.html">System enumeration</a>. <a class="inlay-link" style="display: inline !important;  color: black;" href="./pages/exploitation/metasploit.html">Metasploit</a></div>
+                            </div>
+                        </p>
+                        <h2 style="color: black;">Default logins user/password</h2>
+                        <ul>
+                            <li>Jenkins - admin/admin</li>
+                            <li>Wordpress - admin/password</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('links')">Other Helpful Links</a></h1>
+                    <div id="links" class="click-open">
+                        <ul>
+                            <li>Bypass security restrictions in misconfigured systems: <a class="inlay-link" style="display: inline !important;" href="https://gtfobins.github.io/" target="_blank">GTFOBins</a></li>
+                            <li>Exploit listings: <a class="inlay-link" style="display: inline !important;" href="https://www.exploit-db.com/" target="_blank">exploit-db</a></li>
+                            <li>Reverse shell cheat sheet: <a class="inlay-link" style="display: inline !important;" href="https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank">pentestmonkey</a></li>
+                            <li>Reverse shell generator: <a class="inlay-link" style="display: inline !important;" href="https://revshells.com/" target="_blank">Revshells</a></li>
+                            <li>NMAP scripts: <a class="inlay-link" style="display: inline !important;" href="https://nmap.org/nsedoc/scripts/" target="_blank">nmap.org</a></li>
+                            <li>Meterpreter commands: <a class="inlay-link" style="display: inline !important;" href="https://www.stationx.net/meterpreter-commands/" target="_blank">stationx.net</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('resources')">EJPT Resources/Tips</a></h1>
+                    <div id="resources" class="click-open">
+                        <ul>
+                            <li>EJPT Zero to Hero Playlist (OvergrownCarrot): <a class="inlay-link" href="https://www.youtube.com/watch?v=sWHp0WWHwXE&list=PLfWV6Qh-wJ5MDdpGIMhbokwcC5_dLclSP" target="_blank">YouTube</a></li>
+                            <li>TryHackMe rooms
+                                <ul>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="https://tryhackme.com/r/room/blue" target="_blank">Blue</a></li>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="https://tryhackme.com/r/room/blog" target="_blank">Blog</a></li>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="https://tryhackme.com/r/room/dejavu" target="_blank">Deja Vu</a></li>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="https://tryhackme.com/r/room/goldeneye" target="_blank">GoldenEye</a></li>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="https://tryhackme.com/r/room/anthem" target="_blank">Anthem</a></li>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="https://tryhackme.com/r/room/crackthehash" target="_blank">Crack the hash</a></li>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="https://tryhackme.com/r/room/bruteit" target="_blank">Brute It</a></li>
+                                    <li><a class="inlay-link" style="display: inline !important;" href="https://tryhackme.com/r/room/mrrobot" target="_blank">Mr Robot CTF</a></li>
+                                </ul>
+                            </li>
+                            <li>Test-Taking Tips:
+                                <ul>
+                                    <li><span style="background: yellow; color: black;">SAVE EVERYTHING ON YOUR LOCAL COMPUTER!!!</span> - The eJPT crashed 4 times for me, it doesn't save as much as a text file and you will lose all files/changes made on the lab environment</li>
+                                    <li>Don't fall down rabbit holes! If something is starting to take longer than 20-30 minutes, take a look at something else and maybe come back to it later</li>
+                                    <li>Organize your scan results and notes. I personally organized it by host so that all my information per host was in one place</li>
+                                    <li>There are typically multiple ways to do things. If you're better at using one tool to enumerate, go for it. If you know one exploitation method better than another, use it</li>
+                                    <li>This website contains most of what you need to know about the tools/methods you can use in the lab</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-div" style="border-width: 2px; background: gray; box-shadow: 0 0 10px black; margin: 0px; margin-top: 10px;">
+                <h1 style="text-align: center;">Blue</h1>
+                <div class="section-wrapper">
+                    <h1>Forensics Programs</h1>
+                    <ul class="ul-format">
+                        <li><a class="inlay-link" href="./pages/blue/wireshark.html">Wireshark</a></li>
+                        <li><a class="inlay-link" href="./pages/blue/splunk.html">Splunk</a></li>
+                        <li><a class="inlay-link" href="./pages/blue/autopsy.html">Autopsy</a></li>
+                        <li><a class="inlay-link" href="./pages/blue/kape.html">KAPE</a></li>
+                        <li><a onclick="openItem('blue-commands')" class="inlay-link" href="#exiftool">Exiftool</a></li>
+                        <li><a onclick="openItem('blue-commands')" class="inlay-link" href="#scalpel">Scalpel</a></li>
+                        <li><a onclick="openItem('blue-commands')" class="inlay-link" href="#deepblue">DeepBlueCLI</a></li>
+                    </ul>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('phishing_tools')">Phishing Tools/Info</a></h1>
+                    <div id="phishing_tools" class="click-open">
+                        <h2>Tools</h2>
+                        <ul class="ul-format">
+                            <li><a class="inlay-link" target="_blank" href="https://app.any.run">AnyRun</a></li>
+                            <li><a class="inlay-link" target="_blank" href="https://app.phishtool.com/">Phishtool (Analysis Tab)</a></li>
+                        </ul>
+                        <h2>Info</h2>
+                        <h3>Parts of an Email</h3>
+                        <ul class="ul-format">
+                            <li>Header
+                                <ul>
+                                    <li>From - Shows the sender's email address</li>
+                                    <li>To - Shows the recipient's email address</li>
+                                    <li>Date - Shows the date the email was sent</li>
+                                    <li>Received - Shows various information about intermediary severs and the date when the message was processed</li>
+                                    <li>Reply-to - Shows a reply address</li>
+                                    <li>subject - Shows the subject</li>
+                                    <li>message-ID - Shows a unique identification for the message</li>
+                                    <li>message body - containing the message, separated from the header by a line break</li>
+                                    <li>Disclaimer: There are also other fields that may be present, such as 'X' fields, which may include helpful fields such as "X-DestIP"</li>
+                                </ul>
+                            </li>
+                            <li>Body</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('event_logs')">Windows Event Logs</a></h1>
+                    <div id="event_logs" class="click-open">
+                        <ul>
+                            <li>System logs: Records events associated with the Operating System segments
+                                <ul>
+                                    <li>Hardware changes</li>
+                                    <li>Device drivers</li>
+                                    <li>System changes</li>
+                                </ul>
+                            </li>
+                            <li>Security logs: Records events connected to logon and logoff activities</li>
+                            <li>Application logs: Records events related to logon and logoff activities on a device</li>
+                            <li>Directory Service Events: Active Directory changes and activities, mainly on domain controllers</li>
+                            <li>File Replication Service Events: Records events associated with Windows SErvers during the sharing of Group Policies and logon scripts to domain controllers</li>
+                            <li>DNS Event Logs: D servers use these logs to record domain events to map out</li>
+                            <li>Custom Logs: Events are logged by applciations that require custom data storage. This allows applications to control the log size or attach other parameters (Such as access control lists)</li>
+                            <li><h2>Event log types</h2>
+                                <ul>
+                                    <li>Error: Event that indicates a significant problem such as loss or data/loss of functionality</li>
+                                    <li>Warning: Event that is not necessarily significant, but may indicte future problems (Ex. Low disk space)</li>
+                                    <li>Information: Event that describes the successful operation of an application, driver, or service</li>
+                                    <li>Success Audit: Event that records an audited security access attempts that is successful (Ex. Successful attempt to log on)</li>
+                                    <li>Failure Audit: An event that records an audited security access attempt that fails (Ex. User tries to access a network drive and fails)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 style="text-decoration: underline;">Accessing Event Logs</h2>
+                        <ul>
+                            <li>Event Viewer (GUI): Launch with eventvwr.msc</li>
+                            <li>Wevtutil.exe (CLI tool): <span class="code">wevtutil.exe /?</span></span></li>
+                            <li>Get-WinEvent (Powershell CMDlet): <a href="https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1" target="_blank">Get-WinEvent Documentation</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('sysmon')">Sysmon</a></h1>
+                    <div id="sysmon" class="click-open">
+                        <h2>Installation and running</h2>
+                        <div class="ind">
+                            <ul>
+                                <li style="margin-bottom: 10px;">Powershell installation command: <span class="code">Download-SysInternalsTools C:\Sysinternals</span></li>
+                                <li style="margin-bottom: 10px;">Run sysmon: <span class="code">Sysmon.exe -accepteula -i configfile.xml</span></li>
+                                <li style="margin-bottom: 10px;">Event viewer sysmon event log: <span class="code">Applications and Services Logs/Microsoft/Windows/Sysmon/Operational</span></li>
+                            </ul>
+                        </div>
+                        <h2>Sysmon Event IDs</h2>
+                        <div class="ind">
+                            <ul>
+                                <li>1: Process Creation</li>
+                                <li>3: Network Connection</li>
+                                <li>7: Image Loaded</li>
+                                <li>8: CreateRemoteThread</li>
+                                <li>11: File Created</li>
+                                <li>12/13/14: Registry Event</li>
+                                <li>15: FileCreateStreamHash</li>
+                                <li>22: DNS Event</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('reghives')">Registry Hives</a></h1>
+                    <div id="reghives" class="click-open">
+                        <p><span style="background: yellow; color: black;">Cheat Sheet (Courtesy of TryHackMe): <a href="https://assets.tryhackme.com/cheatsheets/Windows%20Forensics%20Cheatsheet.pdf" target="_blank" class="inlay-link" style="display: inline; color: black;">PDF</a></span></p>
+                        <h2>Registry Hives</h2>
+                        <ul>
+                            <li>Located in C:\Windows\System32\Config
+                                <ul>
+                                    <li>DEFAULT - Mounted on HKEY_USERS\DEFAULT</li>
+                                    <li>SYSTEM - Mounted on HKEY_LOCAL_MACHINE\SYSTEM</li>
+                                    <li>SECURITY - Mounted on HKEY_LOCAL_MACHINE\SECURITY</li>
+                                    <li>SOFTWARE - Mounted on HKEY_LOCAL_MACHINE\SOFTWARE</li>
+                                    <li>SAM - Mounted on HKEY_LOCAL_MACHINE\SAM
+                                        <ul>
+                                            <li>Transaction log: C:\Windows\System32\Config\SAM.LOG</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>Located in C:\Users\username\AppData\Local\Microsoft\Windows
+                                <ul>
+                                    <li>NTUSER.DAT (HIDDEN FILE) - Mounted on HKEY_CURRENT_USER (when a user logs in)</li>
+                                </ul>
+                            </li>
+                            <li>Located in C:\Users\username
+                                <ul>
+                                    <li>USRCLASS.DAT (HIDDEN FILE) - Mounted on HKEY_CURRENT_USER\Software\Classes</li>
+                                </ul>
+                            </li>
+                            <li>Amcache Hive - C:\Windows\AppCompat\Programs\Amcache.hve</li>
+                        </ul>
+                        <ul>
+                            <li>OS Version - SOFTWARE\Microsoft\Windows NT\CurrentVersion</li>
+                            <li>Current control set - HKLM\SYSTEM\CurrentControlSet
+                                <ul>
+                                    <li>Other control sets - HKLM\SYSTEM\ControlSet001 (other numbers)</li>
+                                </ul>
+                            </li>
+                            <li>Last Known Good - SYSTEM\Select\LastKnownGood</li>
+                            <li>Computer Name - SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName</li>
+                            <li>Time Zone Information - SYSTEM\CurrentControlSet\Control\TimeZoneInformation</li>
+                            <li>Network Interfaces (NICs)- SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces</li>
+                            <li>Past Networks - SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Managed AND Unmanaged</li>
+                            <li>Autostart Programs
+                                <ul>
+                                    <li>NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run</li>
+                                    <li>NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce</li>
+                                    <li>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce</li>
+                                    <li>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run</li>
+                                    <li>HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run</li>
+                                </ul>
+                            </li>
+                            <li>Services - SYSTEM\CurrentControlSet\Services</li>
+                            <li>SAM - SAM\Domains\Account\Users</li>
+                            <li>Recent Files - NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs</li>
+                            <li>Office Recent Files - NTUSER>DAT\Software\Microsoft\Office</li>
+                            
+                        </ul>
+                        <h2>Tools</h2>
+                        <ul>
+                            <li>KAPE - Live data acquisition and analysis tool to acquire registry data</li>
+                            <li>Autopsy - Acquire data from both live systems and/or disk images</li>
+                            <li>Regripper - Takes a registry hive as input and outputs a report that extracts data from some of the forensically important keys and values in that hive</li>
+                            <li>(EZTools) Registry Explorer - Can load multiple hives and add data from transaction logs into the hive </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('blue-commands')">Other Helpful Commands</a></h1>
+                    <div id="blue-commands" class="click-open">
+                        <ul>
+                            <li><span class="code">jq</span> - JSON parser</li>
+                            <pre id="exiftool"></pre>
+                            <li><span class="code">exiftool filename</span> - File Data Analysis Tool</li>
+                            <pre id="scalpel"></pre>
+                            <li>scalpel
+                                <ol>
+                                    <li>Copy default configuration file: <span class="code">sudo cp /etc/scalpel/scalpel.conf ./q3.conf</span></li>
+                                    <li>Edit configuration to identify wanted filetypes: <span class="code">nano q3.conf</span></li>
+                                    <li>Run scalpel: <span class="code">scalpel -c q3.conf filename -o outputq3</span></li>
+                                </ol>
+                            </li>
+                            <pre id="deepblue"></pre>
+                            <li>DeepBlueCLI - <span class="code">.\DeepBlueCLI.ps1 .\evtx\EVENTFILENAME.evtx</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('blue-links')">Other Helpful Links</a></h1>
+                    <div id="blue-links" class="click-open">
+                        <ul>
+                            <li><a class="inlay-link" href="https://www.ultimatewindowssecurity.com/securitylog/encyclopedia/default.aspx" target="_blank">Event IDs (ultimatewindowssecurity.com)</a></li>
+                            <li><a class="inlay-link" href="https://www.virustotal.com/" target="_blank">VirusTotal</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="section-wrapper">
+                    <h1><a class="click-header" onclick="showItem('blue-tips')">BTL1 Tips</a></h1>
+                    <div id="blue-tips" class="click-open">
+                        <ul>
+                            <li>The BTL1 test is very simple, don't overthink it. Although you have less time than the eJPT, there's also less questions and significantly less to do</li>
+                            <li>Get familiar with Splunk, Autopsy, and Wireshark.
+                                <ul>
+                                    <li>Splunk - Know basic queries, know your fields, and know where to find your dashboards</li>
+                                    <li>Autopsy - Know your general locations for important artifacts (File downloads, shellbags, etc.)</li>
+                                    <li>Wireshark - Know basic queries, general syntax for wireshark is very important for quick and concise searches</li>
+                                </ul>
+                            </li>
+                            <li>Make sure you're familiar with Windows file structures! Get in the mind of the attacker, some generic locations where they would "hide" files. BTL1 is intentionally for beginners, they're not trying to trick you or mislead you</li>
+                            <li>If you don't know what something is... Google it! There are many red and blue tools that we never ended up using in this course, so if something is unfamiliar to you, look it up</li>
+                            <li>Don't fall down a rabbit hole. The eJPT had some rabbit holes here and there deliberately intended to waste your time, BTL1 has artifacts that are what you're looking for, and then some which are literally artifacts of when they were setting up the test, which is just a fault on Security Blue Team</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            history.scrollRestoration = "manual";
+            $(window).on('beforeunload', function(){
+                $(window).scrollTop(0);
+            });
+            function showItem(id) {
+                var x = document.getElementById(id);
+                if (x.style.display === "none" || x.style.display === "") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+            function openItem(id) {
+                var x = document.getElementById(id);
+                x.style.display = "block";
+            }
+        </script>
+    </body>
+</html>
